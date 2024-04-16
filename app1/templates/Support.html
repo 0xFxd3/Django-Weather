@@ -1,0 +1,117 @@
+{% load static %}
+<!DOCTYPE html> 
+<!-- admin, admin - login -->
+<html>
+   <head>
+      <title>{% block title %}{% endblock %}</title>
+      {% load bootstrap5 %}
+      {% load bootstrap_icons %}
+      {% bootstrap_css %}
+      {% bootstrap_javascript %}
+
+      <link rel="stylesheet" href="{% static 'CSS/mainstyles.css' %}">
+      <link rel="stylesheet" href="{% static 'CSS/KochamCie/checkbox.css' %}">
+      <link rel="stylesheet" href="{% static 'CSS/KochamCie/backgroundStyle.css' %}">
+      <link rel="stylesheet" href="{% static 'CSS/KochamCie/Support/customRounding.css' %}">
+
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+   <body>
+      <div class="container-fluid">
+         <!-- Navigation bar -->
+         <div class="container-fluid fixed-top">
+            <div class="row pt-1">
+               <div class="col-12">
+                  {% include 'navigation.html' %}  
+                  {% block content %}
+                  {% endblock %}
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- Main Body MT OR PT -->
+      <div class="row mt-3 container-fluid border border-dark bg-dark border-5">
+        <div class="row mt-3">
+           <div class="container-fluid col-md-8 ">
+            <div class="row pt-2" style="font-family: 'Magic Retro', sans-serif;">
+                <h1>
+                    Support 
+                </h1>
+                </div>
+           </div>
+           <!-- Slideshow on the right -->
+           <div class="col-md-1 text-success">
+            <a>
+               <a class="btn btn-primary" href="{% url 'Support2'%}">Read More</a>
+            </a>
+           </div>
+           <div class="row mt-4"></div>
+        </div>
+     </div>
+
+        <div class="row mt-3 container-fluid border border-dark border-5">
+            <div class="col-3 mt-2 radius container-fluid border border-dark border-5 text-info bg-dark">
+               <h1>Advice On Asthma</h1>
+               <a>
+                  <ul>
+                     <li>Keep taking your regular preventer inhaler so you’re less likely to get symptoms. And carry your reliever inhaler with you at all times so you’re ready if symptoms do come on.</li>
+                     <li>Use a written asthma action plan so you know what to do if hot weather triggers symptoms.</li>
+                     <li>Go for regular asthma reviews to check you’re on the right meds for you, and you’re taking your inhalers in the best way to get the benefits through the summer months.</li>
+                     <li>If you’re using your reliever inhaler three or more times a week, or you’ve noticed the hot weather’s made your symptoms worse, book an extra catch-up with your doctor or asthma nurse.</li>
+                     <li>Keep inhalers in a cool place out of direct sunlight so they continue to work well. Try keeping your reliever in a cool bag when you’re out and about on a hot day. Don't add any ice to the bag though, because your inhaler needs to be kept dry.</li>
+                     <li>Keep an eye on pollen forecasts and find out more about why staying on top of your hay fever symptoms with antihistamines is good for your asthma too.</li>
+                     <li>Plan any outdoor activities for earlier in the day when the air quality tends to be better, including exercise.</li>
+                   </ul>
+               </a>
+            </div>
+            <div class="col-3 mt-2 radius container-fluid border border-dark border-5 text-info bg-dark">
+                <div class="row pt-2">
+                  <h1>Advice On Hay Fever</h1>
+                  <a>
+                     <ul>
+                        <li>Antihistamines are medicines that can help relieve hay fever symptoms and allergies. Most people with hay fever will be able to manage their symptoms themselves by taking antihistamines.</li>
+                        <li>Do not cut grass or walk on grass</li>
+                        <li>Do not spend too much time outside</li>
+                        <li>Do not keep fresh flowers in the house</li>
+                        <li>Do not smoke or be around smoke – it makes your symptoms worse</li>
+                        <li>Do not dry clothes outside – they can catch pollen</li>
+                        <li>Do not let pets into the house if possible – they can carry pollen indoors</li>
+                      </ul>
+                  </a>
+                </div>
+            </div>
+            <div class="col-3 mt-2 radius container-fluid border border-dark border-5 text-info bg-dark">
+               <div class="row pt-2">
+                  <h1>Advice On Dustmites</h1>
+                  <a>
+                     <ul>
+                        <li>Keep taking your regular preventer inhaler so you’re less likely to get symptoms. And carry your reliever inhaler with you at all times so you’re ready if symptoms do come on.</li>
+                        <li>Use a written asthma action plan so you know what to do if hot weather triggers symptoms.</li>
+                        <li>Go for regular asthma reviews to check you’re on the right meds for you, and you’re taking your inhalers in the best way to get the benefits through the summer months.</li>
+                        <li>If you’re using your reliever inhaler three or more times a week, or you’ve noticed the hot weather’s made your symptoms worse, book an extra catch-up with your doctor or asthma nurse.</li>
+                        <li>Keep inhalers in a cool place out of direct sunlight so they continue to work well. Try keeping your reliever in a cool bag when you’re out and about on a hot day. Don't add any ice to the bag though, because your inhaler needs to be kept dry.</li>
+                        <li>Keep an eye on pollen forecasts and find out more about why staying on top of your hay fever symptoms with antihistamines is good for your asthma too.</li>
+                        <li>Plan any outdoor activities for earlier in the day when the air quality tends to be better, including exercise.</li>
+                      </ul>
+                  </a>
+               </div>
+           </div>
+            <div class="row mt-4"></div>
+        </div>
+
+
+      <!-- Background Video -->
+      <video id="background-video" autoplay muted loop>
+         <source src="{% static 'Video/dashboard.mp4' %}" type="video/mp4">
+         Your browser does not support the video tag.
+      </video>
+
+      <div class="container-fluid fixed-bottom">
+         <div class="row mt-2">
+            <div class="col-12">
+               {% include 'endPage.html' %}
+            </div>
+         </div>
+      </div>         
+   </body>
+</html>

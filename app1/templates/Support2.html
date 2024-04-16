@@ -1,0 +1,114 @@
+{% load static %}
+<!DOCTYPE html> 
+<!-- admin, admin - login -->
+<html>
+   <head>
+      <title>{% block title %}{% endblock %}</title>
+      {% load bootstrap5 %}
+      {% load bootstrap_icons %}
+      {% bootstrap_css %}
+      {% bootstrap_javascript %}
+
+      <link rel="stylesheet" href="{% static 'CSS/mainstyles.css' %}">
+      <link rel="stylesheet" href="{% static 'CSS/KochamCie/checkbox.css' %}">
+      <link rel="stylesheet" href="{% static 'CSS/KochamCie/backgroundStyle.css' %}">
+      <link rel="stylesheet" href="{% static 'CSS/KochamCie/Support/customRounding.css' %}">
+
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+   <body>
+      <div class="container-fluid">
+         <!-- Navigation bar -->
+         <div class="container-fluid fixed-top">
+            <div class="row pt-1">
+               <div class="col-12">
+                  {% include 'navigation.html' %}  
+                  {% block content %}
+                  {% endblock %}
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- Main Body MT OR PT -->
+      <div class="row mt-3 container-fluid border border-dark  bg-dark border-5">
+        <div class="row mt-3">
+           <div class="container-fluid col-md-8 ">
+            <div class="row pt-2" style="font-family: 'Magic Retro', sans-serif;">
+                <h1>
+                    Support (Second Page)
+                </h1>
+                </div>
+           </div>
+           <!-- Slideshow on the right -->
+           <div class="col-md-1 text-success">
+            <a>
+
+            </a>
+           </div>
+           <div class="row mt-4"></div>
+        </div>
+     </div>
+
+        <div class="row mt-3 container-fluid border border-dark border-5">
+            <div class="col-3 mt-2 radius container-fluid border border-dark border-5 text-info bg-dark">
+               <h1>Advice On Heatwave</h1>
+               <a>
+                  <ul>
+                     <li>Keep out of the heat if you can. If you have to go outside, stay in the shade especially between 11am and 3pm, wear sunscreen, a hat and light clothes, and avoid exercise or activity that makes you hotter.</li>
+                     <li>Cool yourself down. Have cold food and drinks, avoid alcohol, caffeine and hot drinks, and have a cool shower or put cool water on your skin or clothes.</li>
+                     <li>Keep your living space cool. Close windows during the day and open them at night when the temperature outside has gone down. Electric fans can help if the temperature is below 35 degrees. Check the temperature of rooms, especially where people at higher risk live and sleep.</li>
+                    </ul>
+               </a>
+            </div>
+            <div class="col-3 mt-2 radius container-fluid border border-dark border-5 text-info bg-dark">
+                <div class="row pt-2">
+                  <h1>Advice On Cold Weather</h1>
+                  <a>
+                     <ul>
+                        <li>Eating regularly helps keep you warm so try to have at least one hot meal a day along with regular hot drinks.</li>
+                        <li>Keep your house warm and your bedroom window closed especially on cold winter nights, as breathing cold air can be bad for your health as it increases the risk of chest infections.</li>
+                        <li>With many of us having to spend more time at home it can make it harder to keep active. It’s important to continue to do what you can to stay active as this can help with both your physical and mental health. Try to keep moving when you are indoors, try not to sit still for more than an hour or so. Break up your time spent being inactive by walking around your home or standing up from your chair when you are on the phone.</li>
+                        <li>If you are heading outside for a walk or maybe some gardening, wear several layers of light clothes. Remember that several thin layers of clothing will keep you warmer than one thick layer as the layers trap warm air.
+
+                            It doesn’t matter what you do to keep active, as long as it’s something you enjoy and keeps you moving. There is strong evidence that people who are active have a lower risk of heart disease, stroke, depression and can also reduce the risk of falling.</li>
+                    </ul>
+                  </a>
+                </div>
+            </div>
+            <div class="col-3 mt-2 radius container-fluid border border-dark border-5 text-info bg-dark">
+               <div class="row pt-2">
+                  <h1>Protecting property from flooding</h1>
+                  <a>
+                     <ul>
+                        <li>A flood plan can help you to prepare for flooding and reduce the impact it might have to your home, business or community, it can also help with the recovery process.</li>
+                        <div class="text-danger">
+                            <h5>You may be able to download a flood plan template from your local flood agency or council or put your own together using the following list as a guide:</h5>
+                        </div>
+                        <li>A list of useful contact numbers - including your local council, utility providers and your insurance company</li>
+                        <li>How to shut off your electricity or gas supply</li>
+                        <li>Move your valuable belongings to a safe place</li>
+                        <li>What would you need to move to safety during a flood – think about your pets, car, furniture</li>
+                        <li>Could you offer to help vulnerable friends or neighbours?</li>
+                    </ul>
+                  </a>
+               </div>
+           </div>
+            <div class="row mt-4"></div>
+        </div>
+
+
+      <!-- Background Video -->
+      <video id="background-video" autoplay muted loop>
+         <source src="{% static 'Video/dashboard.mp4' %}" type="video/mp4">
+         Your browser does not support the video tag.
+      </video>
+
+      <div class="container-fluid fixed-bottom">
+         <div class="row mt-2">
+            <div class="col-12">
+               {% include 'endPage.html' %}
+            </div>
+         </div>
+      </div>         
+   </body>
+</html>

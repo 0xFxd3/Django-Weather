@@ -1,0 +1,32 @@
+{% load static %}
+<!DOCTYPE html> 
+<!-- admin, admin - login -->
+<html>
+   <head>
+      <title>{% block title %}{% endblock %}</title>
+      {% load bootstrap5 %}
+      {% load bootstrap_icons %}
+      {% bootstrap_css %}
+      {% bootstrap_javascript %}
+      <link rel="stylesheet" href="{% static 'CSS/mainstyles.css' %}">
+
+   </head>
+   <body>
+      <!-- Main Body MT OR PT -->
+      <div class="row mt-3">
+         <div class="row mt-3">
+            <div class="container-fluid col-md-8 newSize">
+               <form action="" method="POST" class="was-validated">
+                <h1>Please Scroll Down To Submit</h1>
+                <div class="text-info form-control form-control-lg form-floating mb-3 newSize">
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                 </div>
+                 <input type="submit" name="Submit" class="btn btn-primary" value="Submit" />
+
+                </form>
+            </div>
+         </div>
+      </div>    
+   </body>
+</html>

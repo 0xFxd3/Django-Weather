@@ -1,0 +1,75 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>{% block title %}{% endblock %}</title>
+      {% load bootstrap5 %}
+      {% load bootstrap_icons %}
+      {% bootstrap_css %}
+      {% bootstrap_javascript %}
+      <!-- <link rel="stylesheet" href="{% static 'font.css' %}"> -->
+   </head>
+   <body>
+      <style>
+         .carousel-item img
+         {
+         object-fit: cover;
+         object-position: center;
+         height: 30vh;
+         overflow:hidden;
+         }
+      </style>
+      <div class="container-fluid">
+      <!-- end of top of page -->
+      <!--<div class="row"> -->
+         <!-- Middle -->
+         <div class="bg-dark">
+            <!-- this is where we start the carousel -->
+            <div id="carouselExampleCaptions" class="carousel slide">
+               <div class="carousel-indicators">
+                  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
+               </div>
+               <div class="carousel-inner">
+                  <!-- this is a thing - image on the slide -->
+                  <div class="carousel-item active"  data-bs-interval="0">
+                     <img src="{% static 'images/fire.jpg' %}" class="d-block w-100" alt="1">
+                     <div class="carousel-caption d-none d-md-block">
+                        <h5 class="display-3 fs-bolder bg-transparent opacity-90">WildLife fires</h5>
+                     </div>
+                  </div>
+                  <!--  -->
+                  <div class="carousel-item " data-bs-interval="0">
+                     <img src="{% static 'images/hi.jpg' %}"  class="d-block w-100" alt="2 ">
+                     <div class="carousel-caption d-none d-md-block">
+                        <h5 class="display-3 fs-bolder bg-transparent opacity-90">Teach</h5>
+                     </div>
+                  </div>
+                  <div class="carousel-item " data-bs-interval="1">
+                     <img src="{% static 'images/kids.jpg' %}"  class="d-block w-100" alt="3 ">
+                     <div class="carousel-caption d-none d-md-block">
+                        <h5 class="display-3 fs-bolder bg-transparent opacity-90">Gather</h5>
+                     </div>
+                  </div>
+                  <div class="carousel-item " data-bs-interval="2">
+                     <img src="{% static 'images/world-environment.png' %}"  class="d-block w-100" alt="4 ">
+                     <div class="carousel-caption d-none d-md-block">
+                        <h5 class="display-3 fs-bolder bg-transparent opacity-90">Save</h5>
+                     </div>
+                  </div>
+               </div>
+               <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+               <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+               <span class="visually-hidden">Previous</span>
+               </button>
+               <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+               <span class="carousel-control-next-icon" aria-hidden="true"></span>
+               <span class="visually-hidden">Next</span>
+               </button>
+            </div>
+         </div>
+      </div>
+   </body>
+</html>

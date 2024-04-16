@@ -1,0 +1,27 @@
+{% load static %}
+<!-- UNPKG -->
+<link href="https://unpkg.com/css.gg/icons/icons.css" rel="stylesheet" />
+
+<head>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="{% static 'CSS/mainstyles.css' %}"> 
+</head>
+
+<style>
+	.custom-icon {
+	  font-size: 2vw;
+	}
+  </style>
+    <div class="row m-1 border border-dark border-5 containerColour">
+      <div class="col-2 luxbar-menu-dark m-0">
+        <div class="row mt-3 fs-6">  <i class="gg-phone custom-icon"></i>Call Us:<br> 0111 999 888 </div>
+      </div>
+      <div class="col-8 d-flex justify-content-center luxbar-menu-dark text-success">
+        <a href="http://www.twitter.com" target="_blank" title="Twitter link"> <i class="row mt-4 gg-twitter mx-3 custom-icon"></i> <p hidden>Twitter link</p> </a>
+        <a href="https://www.facebook.com/en/" target="_blank" title="Fb link"> <i class="row mt-4 gg-facebook mx-3 custom-icon"></i> <p hidden>Fb link</p> </a>
+        <a href="https://www.instagram.com" target="_blank" title="Instagram link"> <i class="row mt-4 gg-instagram mx-3 custom-icon"></i> <p hidden>Instagram link</p> </a>
+      </div>
+      <div class="col-2 luxbar-menu-dark m-0">
+        <div class="fs-6"> <i class="gg-mail custom-icon"></i>  Contact Us: <br> HealthAdviceGP@health.com</div>
+      </div>
+</div>

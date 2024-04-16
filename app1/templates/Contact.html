@@ -1,0 +1,95 @@
+{% load static %}
+<!DOCTYPE html> 
+<!-- admin, admin - login -->
+<html>
+   <head>
+      <title>{% block title %}{% endblock %}</title>
+      {% load bootstrap5 %}
+      {% load bootstrap_icons %}
+      {% bootstrap_css %}
+      {% bootstrap_javascript %}
+
+      <link rel="stylesheet" href="{% static 'CSS/mainstyles.css' %}">
+      <link rel="stylesheet" href="{% static 'CSS/KochamCie/checkbox.css' %}">
+      <link rel="stylesheet" href="{% static 'CSS/KochamCie/backgroundStyle.css' %}">
+      <link rel="stylesheet" href="{% static 'CSS/KochamCie/Support/customRounding.css' %}">
+
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+   <body>
+      <div class="container-fluid">
+         <!-- Navigation bar -->
+         <div class="container-fluid fixed-top">
+            <div class="row pt-1">
+               <div class="col-12">
+                  {% include 'navigation.html' %}  
+                  {% block content %}
+                  {% endblock %}
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- Main Body MT OR PT -->
+      <div class="row mt-3 container-fluid border bg-dark border-dark border-5">
+        <div class="row mt-3">
+           <div class="container-fluid col-md-8">
+            <div class="row pt-2" style="font-family: 'Magic Retro', sans-serif;">
+                <h1>
+                    Book a inquiry.
+                </h1>
+                </div>
+           </div>
+           <!-- Slideshow on the right -->
+           <div class="col-md-4 text-success">
+            <a>
+               
+            </a>
+           </div>
+           <div class="row mt-4"></div>
+        </div>
+     </div>
+
+        <div class="row mt-4 container-fluid border border-dark border-5">
+            <div class="col-3 mt-2 radius container-fluid border border-dark border-5 text-info bg-dark">
+               {% if success == True %}
+                  <h1>Form submitted.</h1>
+               {% else %}
+               <form action="" style="display: inline-block;" method="POST" class="was-validated">
+                  <div class="text-info">
+                     {% csrf_token %}
+                     {{ form.as_p }}
+                  </div>
+                  <input type="submit" name="Submit" class="btn btn-primary" value="Submit" />
+                </form>
+               {% endif %}
+               </div>
+            <div class="col-3 mt-2 radius container-fluid border border-dark border-5 text-info bg-dark">
+                  <div class="row pt-2">
+                     <h1>We take inquiries seriously</h1>
+                     <a>Statutory inquiries are public and often have the benefit of being live-streamed on the internet. This brings with it a level of public scrutiny that arguably forces participants to take matters more seriously, and properly engage for fear of their personal or professional integrity being criticised. </a>
+                  </div>
+              </div>
+            <div class="col-3 mt-2 radius container-fluid border border-dark border-5 text-info bg-dark">
+                <div class="row pt-2">
+                    {% include 'weather.html' %} 
+                </div>
+            </div>
+            <div class="row mt-4"></div>
+        </div>
+
+
+      <!-- Background Video -->
+      <video id="background-video" autoplay muted loop>
+         <source src="{% static 'Video/dashboard.mp4' %}" type="video/mp4">
+         Your browser does not support the video tag.
+      </video>
+
+      <div class="container-fluid fixed-bottom">
+         <div class="row mt-2">
+            <div class="col-12">
+               {% include 'endPage.html' %}
+            </div>
+         </div>
+      </div>         
+   </body>
+</html>

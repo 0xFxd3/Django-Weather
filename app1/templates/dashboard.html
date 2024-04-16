@@ -1,0 +1,115 @@
+{% load static %}
+<!DOCTYPE html> 
+<!-- admin, admin - login -->
+<html>
+   <head>
+      <title>{% block title %}{% endblock %}</title>
+      {% load bootstrap5 %}
+      {% load bootstrap_icons %}
+      {% bootstrap_css %}
+      {% bootstrap_javascript %}
+
+      <link rel="stylesheet" href="{% static 'CSS/mainstyles.css' %}">
+      <link rel="stylesheet" href="{% static 'CSS/KochamCie/checkbox.css' %}">
+      <link rel="stylesheet" href="{% static 'CSS/KochamCie/backgroundStyle.css' %}">
+
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+   <body>
+      <div class="container-fluid">
+         <!-- Navigation bar -->
+         <div class="container-fluid fixed-top">
+            <div class="row pt-1">
+               <div class="col-12">
+                  {% include 'navigation.html' %}  
+                  {% block content %}
+                  {% endblock %}
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- Main Body MT OR PT -->
+      <div class="row mt-3 container-fluid border bg-dark border-5">
+        <div class="row mt-3">
+           <div class="container-fluid col-md-8">
+            <div class="row pt-2" style="font-family: 'Magic Retro', sans-serif;">
+                <h1>
+                    Dashboard
+                </h1>
+                </div>
+           </div>
+           <!-- Slideshow on the right -->
+           <div class="col-md-4 text-success">
+            <a>
+                Actually this is where the settings and profile button will go 
+            </a>
+           </div>
+           <div class="row mt-4"></div>
+        </div>
+     </div>
+
+        <div class="row mt-4 container-fluid ">
+            <div class="col-4 mt-2 dashboardContainers container-fluid bg-dark border border-dark border-5">
+               {% include 'coolfuckinggraph.html' %}
+            </div>
+            <div class="col-4 mt-2 dashboardContainers container-fluid bg-dark border border-dark border-5 text-primary">
+               <h4>Welcome {{username}} !</h4>
+               <h4>Current Location : </h4>
+               <ul>
+               {% if Quality == 1 %}
+                  <li>Air Quality Is Good (Index 1)</li>
+               {% elif Quality == 2 %}
+                  <li>Air Quality Is Fair (Index 2)</li>
+               {% elif Quality == 3 %}
+                  <li>Air Quality Is Moderate (Index 3)</li>                  
+               {% elif Quality == 4 %}
+                  <li>Air Quality Is Poor (Index 4)</li>                  
+               {% elif Quality == 5 %}
+                  <li>Air Quality Is Very Poor (Index 5)</li>                  
+               {% endif %}
+                  <li>City based on location {{City}}</li>
+                  <li>Continent based on location {{Continent}}</li>
+                  <li>CountryName based on location {{CountryName}}</li>
+               </ul>
+               <h4>Advise Based On Location : </h4>
+               <ul>
+                  <div class ="text-danger">
+                  {% if Quality == 4 %}
+                     <li>Stay at home, quality of air in your area is dangerous!</li>                  
+                  {% elif Quality == 5 %}
+                     <li>Stay at home, quality of air in your area is dangerous!</li>             
+                  {% else %}
+                  </div>
+                     <div class ="text-success">
+                        <li>Awesome, the quality of air in your area is great!</li>    
+                        <li>Todays weather is clear!</li>
+                     </div> 
+                     <div class ="text-info">
+                        <li>Remember to have fun while keeping safe.</li>
+                     </div>
+                  {% endif %}
+               </ul>
+            </div>
+            <div class="col-3 mt-2 dashboardContainers container-fluid">
+                <div class="row pt-2">
+                    {% include 'weather.html' %} 
+                </div>
+            </div>
+        </div>
+
+
+      <!-- Background Video -->
+      <video id="background-video" autoplay muted loop>
+         <source src="{% static 'Video/dashboard.mp4' %}" type="video/mp4">
+         Your browser does not support the video tag.
+      </video>
+
+      <div class="container-fluid fixed-bottom">
+         <div class="row mt-2">
+            <div class="col-12">
+               {% include 'endPage.html' %}
+            </div>
+         </div>
+      </div>         
+   </body>
+</html>

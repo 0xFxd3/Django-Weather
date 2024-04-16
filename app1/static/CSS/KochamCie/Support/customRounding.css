@@ -1,0 +1,11 @@
+.radius{
+    border-radius: 30px;
+}
+
+.matchNavigationBG{
+    background-color: #212121;
+}
+
+.radius:hover{
+    opacity: 0.5;
+}

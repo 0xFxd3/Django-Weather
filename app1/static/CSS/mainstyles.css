@@ -1,0 +1,100 @@
+.containerSize{
+        width: 1000px; /* change the width of the container */
+        height: 300px; /* change the height of the container */
+        border-radius: 10px; /* change the border-radius to make the corners round */
+        background-color: rgb(80, 80, 80); /* change the background color of the container */
+}
+
+
+.matchColourOfNavBar{
+  background-color: rgb(25,27,28);
+}
+
+.sizeOfGif{
+  width: 1000px;
+  height: 300px; 
+}
+
+.dashboardContainers{
+  width: 600px; /* change the width of the container */
+  height: 400px; /* change the height of the container */
+  border-radius: 10px; /* change the border-radius to make the corners round */
+}
+
+.dashboardContainers:hover{
+  opacity: 0.9;
+}
+
+.containerColour{
+  background-color: rgb(80, 80, 80); /* change the background color of the container */
+}
+
+.myCoolFont{
+  font-family: 'Magic Retro', sans-serif;
+}    
+
+.btn-22,
+.btn-22 *,
+.btn-22 :after,
+.btn-22 :before,
+.btn-22:after,
+.btn-22:before {
+  border: 0 solid;
+  box-sizing: border-box;
+}
+.btn-22 {
+  -webkit-tap-highlight-color: transparent;
+  background-color: #202020;
+  background-image: none;
+  color: #fff;
+  cursor: pointer;
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif,
+    Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+  font-size: 100%;
+  font-weight: 900;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+  text-transform: uppercase;
+}
+.btn-22:disabled {
+  cursor: default;
+}
+.btn-22:-moz-focusring {
+  outline: auto;
+}
+.btn-22 svg {
+  display: block;
+}
+.btn-22 [hidden] {
+  display: none;
+}
+.btn-22 {
+  border-radius: 99rem;
+  border-width: 2px;
+  overflow: hidden;
+  padding: 0.8rem 3rem;
+  position: relative;
+}
+.btn-22 span {
+  mix-blend-mode: difference;
+}
+.btn-22:before {
+  aspect-ratio: 1;
+  background: #fff;
+  border-radius: 50%;
+  content: "";
+  left: -100%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%) scale(1);
+  transform-origin: left center;
+  transition: transform 0.2s ease;
+  width: 100%;
+}
+.btn-22:hover:before {
+  transform: translateY(-50%) scale(2);
+}
+
+

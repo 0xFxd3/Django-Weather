@@ -1,0 +1,98 @@
+{% load static %}
+<!DOCTYPE html> 
+<!-- admin, admin - login -->
+<html>
+   <head>
+      <title>{% block title %}{% endblock %}</title>
+      {% load bootstrap5 %}
+      {% load bootstrap_icons %}
+      {% bootstrap_css %}
+      {% bootstrap_javascript %}
+
+      <link rel="stylesheet" href="{% static 'CSS/mainstyles.css' %}">
+      <link rel="stylesheet" href="{% static 'CSS/KochamCie/checkbox.css' %}">
+      <link rel="stylesheet" href="{% static 'CSS/KochamCie/backgroundStyle.css' %}">
+
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+   <body>
+      <div class="container-fluid">
+         <!-- Navigation bar -->
+         <div class="container-fluid fixed-top">
+            <div class="row pt-1">
+               <div class="col-12">
+                  {% include 'navigation.html' %}  
+                  {% block content %}
+                  {% endblock %}
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- Main Body MT OR PT -->
+      <div class="row mt-3 container-fluid border  bg-dark border-dark border-5">
+        <div class="row mt-3">
+           <div class="container-fluid col-md-8">
+            <div class="row pt-2" style="font-family: 'Magic Retro', sans-serif;">
+                <h1>
+                    About Us
+                </h1>
+                </div>
+           </div>
+           <!-- Slideshow on the right -->
+           <div class="col-md-4 text-success">
+            <a>
+              
+            </a>
+           </div>
+           <div class="row mt-4"></div>
+        </div>
+     </div>
+
+        <div class="row mt-4 container-fluid border border-dark border-5">
+            <div class="col-9 mt-2 container-fluid border border-dark border-5 bg-dark text-info">
+               <h1>Health Advice Group provides</h1>
+               <ul>
+                  <li>
+                     Advice on how to deal with extreme weather temperatures
+                  </li>
+                  <li>
+                     Information on environmental health conditions and seasonal allergies (e.g. asthma,hay fever)
+                  </li>
+                  <li>
+                     Risk assessments for home environments.
+                  </li>
+               </ul>
+               <h1>With the new site, Health Advice Group now provides</h1>
+               <ul>
+                  <li>Advice on how to deal with extreme weather temperatures</li>
+                  <li>Weather forecasting to inform health decisions</li>
+                  <li>Access to a dashboard for monitoring air quality data</li>
+                  <li>Personalised health advice based on location</li>
+                  <li>A personal health tracking tool</li>
+                  <li>Advice on how to deal with health matters affected by weather and environmental conditions (Second Support Page)</li>
+               </ul>
+            </div>
+            <div class="col-3 mt-2 container-fluid">
+                <div class="row pt-2">
+                  {% include 'slideshow.html' %} 
+                </div>
+            </div>
+            <div class="row mt-4"></div>
+        </div>
+
+
+      <!-- Background Video -->
+      <video id="background-video" autoplay muted loop>
+         <source src="{% static 'Video/dashboard.mp4' %}" type="video/mp4">
+         Your browser does not support the video tag.
+      </video>
+
+      <div class="container-fluid fixed-bottom">
+         <div class="row mt-2">
+            <div class="col-12">
+               {% include 'endPage.html' %}
+            </div>
+         </div>
+      </div>         
+   </body>
+</html>

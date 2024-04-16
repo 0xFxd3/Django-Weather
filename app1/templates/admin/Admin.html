@@ -1,0 +1,61 @@
+{% load static %}
+<!DOCTYPE html> 
+<!-- admin, admin - login -->
+<html>
+   <head>
+      <title>{% block title %}{% endblock %}</title>
+      {% load bootstrap5 %}
+      {% load bootstrap_icons %}
+      {% bootstrap_css %}
+      {% bootstrap_javascript %}
+
+      <link rel="stylesheet" href="{% static 'CSS/mainstyles.css' %}">
+      <link rel="stylesheet" href="{% static 'CSS/KochamCie/checkbox.css' %}">
+      <link rel="stylesheet" href="{% static 'CSS/KochamCie/backgroundStyle.css' %}">
+      <link rel="stylesheet" href="{% static 'CSS/KochamCie/Support/customRounding.css' %}">
+
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+   <body class="containerColour">
+      <div class="container-fluid">
+         <!-- Navigation bar -->
+         <div class="container-fluid fixed-top">
+            <div class="row pt-1">
+               <div class="col-12">
+                  {% include 'navigation.html' %}  
+                  {% block content %}
+                  {% endblock %}
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- Main Body MT OR PT -->
+
+
+        <div class="row mt-4 container-fluid text-info">
+            <h1><3 Welcome Admin <3</h1>
+                <h3>Administrative URLS</h3>
+            <div class="row mt-4">
+                <a class="btn btn-primary" href="/admin">Website Admin Page</a>
+                <a class="btn btn-primary" href="{% url 'viewBooking'%}">View Inquiry Bookings</a>
+            </div>
+            <h3>Website URLS</h3>
+                <a class="btn btn-primary" href="{% url 'viewBooking'%}">View Inquiry Bookings</a>
+                <a class="btn btn-primary" href="{% url 'Admin'%}">Admin Page</a>
+                <a class="btn btn-primary" href="{% url 'main'%}">Main Page</a>
+                <a class="btn btn-primary" href="{% url 'Support'%}">Support Page</a>
+                <a class="btn btn-primary" href="{% url 'Contact'%}">Contact Page</a>
+                <a class="btn btn-primary" href="{% url 'AboutUs'%}">About Us Page</a>
+                <a class="btn btn-primary" href="{% url 'Settings'%}">Settings Page</a>
+                <a class="btn btn-primary" href="{% url 'Success'%}">Success</a>
+        </div>
+
+      <div class="container-fluid fixed-bottom">
+         <div class="row mt-2">
+            <div class="col-12">
+           
+            </div>
+         </div>
+      </div>         
+   </body>
+</html>

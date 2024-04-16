@@ -1,0 +1,20 @@
+<table border = "2">
+    <tr>
+        <td>Name </td>
+        <td>Email </td>
+        <td>Birth Date </td>
+        <td>Message </td>
+    </tr>
+
+    {% for clientInfo in clientInformation %}
+        <tr>
+            <td>{{ clientInfo.accountName }}
+                <a href="{% url 'deleteBooking' clientInfo.accountName %}">DELETE</a>
+                <a href="{% url 'editBooking' clientInfo.accountName %}">EDIT</a>
+            </td>
+            <td>{{ clientInfo.email }}</td>
+            <td>{{ clientInfo.birthDate }}</td>
+            <td>{{ clientInfo.message }}</td>
+        </tr>
+    {% endfor %}
+</table>

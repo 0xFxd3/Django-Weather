@@ -1,0 +1,21 @@
+Health Advice Group provides:
++ advice on how to deal with extreme weather temperatures                                                       [ DONE  kind of, message is static but it works]
++ information on environmental health conditions and seasonal allergies (e.g. asthma,hay fever) [DONE]
+• risk assessments for home environments.
+The client (the trustees of Health Advice Group) would like to develop a digital solution
+that provides:
++ weather forecasting to inform health decisions                                                              [ DONE ]
++ access to a dashboard for monitoring air quality data                 [done]
++ advice on how to deal with health matters affected by weather and environmental conditions.    [ DONE]
+The client has done some market research to identify features that could be included in
+the digital solution. The potential features suggested by the client are:
++ personalised health advice based on location                             [ DONE ] 
+- accessibility features to support a wide range of user needs           [done kind of it just like works by usingthe tags enit]
++ a personal health tracking tool.                                                                            [ DONE ]
+
+
+
+
+
+TO DO:
+• risk assessments for home environments.
